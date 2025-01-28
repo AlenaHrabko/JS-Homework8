@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$font: "Montserrat";
+
+body {
+  background-image: url(../images/back.png);
+  background-size: cover;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h1,
+h2 {
+  font-family: $font;
+}
+
+input,
+select,
+textarea,
+button {
+  border-radius: 10px;
+  border: 1px solid aqua;
+  font-family: $font;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+#taskName {
+  height: 30px;
+  width: 200px;
+}
+
+#taskDescription {
+  height: 100px;
+  width: 250px;
+}
+
+#taskStatus {
+  height: 30px;
+}
+
+button {
+  height: 30px;
+  width: 120px;
+  background-color: aquamarine;
+}
+
+#filterStatus {
+  height: 30px;
+}
+
+#searchInput {
+  height: 30px;
+}
+
+.fillingTask,
+.searchTask {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 600px) {
+  .fillingTask {
+    display: flex;
+    flex-direction: column;
+    #taskStatus {
+      width: 30%;
+    }
+  }
+}
