@@ -16,7 +16,11 @@
     <div class="container">
       <h1>Todo list</h1>
       <div class="fillingTask">
-        <input type="text" id="taskName" placeholder="Введите название задачи"/>
+        <input
+          type="text"
+          id="taskName"
+          placeholder="Введите название задачи"
+        />
         <textarea id="taskDescription" placeholder="Опишите задачу"></textarea>
         <select id="taskStatus">
           <option value="open">Open</option>
@@ -35,7 +39,29 @@
           <option value="critical">Critical</option>
         </select>
         <input type="text" id="searchInput" placeholder="Поиск по названию" />
+        <label>
+          <input type="checkbox" id="filterClosed" />
+          Выполненные задачи
+        </label>
         <button id="searchButton">Поиск</button>
+      </div>
+
+      <div id="popup" class="modal" style="display: none">
+        <div class="modal-content">
+          <span class="close" id="closeButton">&times;</span>
+          <h2>Редактировать задачу</h2>
+          <label for="editTaskName">Название:</label>
+          <input type="text" id="editTaskName" /><br />
+          <label for="editTaskDescription">Описание:</label>
+          <input type="text" id="editTaskDescription" /><br />
+          <label for="editTaskStatus">Статус:</label>
+          <select id="editTaskStatus">
+            <option value="open">Open</option>
+            <option value="critical">Critical</option>
+            <option value="closed">Closed</option></select
+          ><br />
+          <button id="saveEditButton">Сохранить</button>
+        </div>
       </div>
 
       <div class="list">
